@@ -7,9 +7,9 @@ namespace Estoque.Core.Util
     public sealed class DbHelper : IDisposable
     {
         public IDbConnection Connection { get; }
-        public DbHelper(string connString)
+        public DbHelper()
         {
-            Connection = new MySqlConnection(connString);
+            Connection = new MySqlConnection(Settings.ConnectionString);
             Connection.Open();
         }
 

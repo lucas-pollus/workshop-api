@@ -8,6 +8,8 @@ namespace Estoque.Core
         public string CodigoBarras { get; set; }
         public DateTime DataLeitura { get; set; }
 
+        protected LeituraEtiqueta() { }
+        
         public LeituraEtiqueta(string codigoBarras)
         {
             CodigoBarras = codigoBarras;
