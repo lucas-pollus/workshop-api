@@ -1,0 +1,13 @@
+Mysql - Docker
+docker pull mysql/mysql-server:latest
+docker images
+docker run --name=mysql1 -e MYSQL_ROOT_HOST=% -p 3306:3306 -d mysql/mysql-server
+docker logs mysql1
+
+GENERATED ROOT PASSWORD: rAxrufewFeLAHcil0MAK!ocobMy ---> MinhaSenha01
+
+docker exec -it mysql1 mysql -u root -p
+
+ALTER USER 'root'@'localhost' IDENTIFIED BY '<password>';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<password>';
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '<password>';
